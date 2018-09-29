@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="wrapper">
+    <div class="grid-row" style="padding: 0;">
+      <div class="column-two-thirds">
+        <!-- <a href="/" class="header__logo"></a> -->
+        <div class="header__title">
+          <span class="heading-medium">Meetup Manager</span>
+        </div>
+      </div>
+      <div class="column-third">
+        <div class="header__user">
+          <% if user_signed_in? %>
+            <%= current_user.email %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
